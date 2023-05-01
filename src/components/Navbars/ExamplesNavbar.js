@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
   Button,
@@ -42,6 +42,7 @@ export default function ExamplesNavbar() {
       window.removeEventListener("scroll", changeColor);
     };
   }, []);
+
   const changeColor = () => {
     if (
       document.documentElement.scrollTop > 99 ||
@@ -55,6 +56,7 @@ export default function ExamplesNavbar() {
       setColor("navbar-transparent");
     }
   };
+
   const toggleCollapse = () => {
     document.documentElement.classList.toggle("nav-open");
     setCollapseOpen(!collapseOpen);
@@ -69,12 +71,12 @@ export default function ExamplesNavbar() {
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand to="/" id="navbar-brand" tag={Link}>
-            <span>BLK• </span>
-            Design System React
+          <NavbarBrand  id="navbar-brand">
+            <span>SUG• </span>
+            Sogundese
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by Creative Tim
+            Sogundese
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}
@@ -153,20 +155,14 @@ export default function ExamplesNavbar() {
                 className="nav-link d-none d-lg-block"
                 color="primary"
                 target="_blank"
-                href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-examples-navbar-upgrade-pro"
+                href="o"
               >
-                <i className="tim-icons icon-spaceship" /> Upgrade to PRO
+                <i className="tim-icons icon-spaceship" /> Buy
               </Button>
             </NavItem>
+            
             <NavItem>
-              <NavLink tag={Link} to="/">
-                Back to Kit
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/creativetimofficial/blk-design-system-react/issues">
-                Have an issue?
-              </NavLink>
+            
             </NavItem>
           </Nav>
         </Collapse>

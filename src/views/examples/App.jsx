@@ -1,39 +1,35 @@
-import React from "react";
-// react plugin used to create charts
-import { Line } from "react-chartjs-2";
-// reactstrap components
+import React from 'react'
+import LandingPage from './LandingPage'
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  ListGroupItem,
-  ListGroup,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+    Button,
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    CardTitle,
+    ListGroupItem,
+    ListGroup,
+    Container,
+    Row,
+    Col
+  } from "reactstrap";
 
-// core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+  import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
+export const App = () => {
+    React.useEffect(() => {
+        document.body.classList.toggle("landing-page");
+        // Specify how to clean up after this effect:
+        return function cleanup() {
+          document.body.classList.toggle("landing-page");
+        };
+      }, []);
 
-
-export default function LandingPage() {
-  React.useEffect(() => {
-    document.body.classList.toggle("landing-page");
-    // Specify how to clean up after this effect:
-    return function cleanup() {
-      document.body.classList.toggle("landing-page");
-    };
-  }, []);
   return (
-    <>
-      <ExamplesNavbar />
-      <div className="wrapper">
+    <div>
+         <ExamplesNavbar />
+        <div className="wrapper">
         <div className="page-header">
           <img
             alt="..."
@@ -454,6 +450,8 @@ export default function LandingPage() {
        
         <Footer />
       </div>
-    </>
-  );
+        
+    </div>
+
+  )
 }
