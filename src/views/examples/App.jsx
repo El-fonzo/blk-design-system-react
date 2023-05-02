@@ -1,14 +1,13 @@
 import React from 'react'
-import LandingPage from './LandingPage'
+
 import {
     Button,
     Card,
-    CardHeader,
+  
     CardBody,
-    CardFooter,
+   
     CardTitle,
-    ListGroupItem,
-    ListGroup,
+  
     Container,
     Row,
     Col

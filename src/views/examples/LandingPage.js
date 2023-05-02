@@ -1,16 +1,15 @@
 import React from "react";
 // react plugin used to create charts
-import { Line } from "react-chartjs-2";
+
 // reactstrap components
 import {
   Button,
   Card,
-  CardHeader,
+ 
   CardBody,
-  CardFooter,
+
   CardTitle,
-  ListGroupItem,
-  ListGroup,
+
   Container,
   Row,
   Col
